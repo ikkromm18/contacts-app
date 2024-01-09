@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import PropTypes from "prop-types";
 // eslint-disable-next-line react/prop-types
 function DeleteButton({ id, onDelete }) {
   return (
@@ -9,5 +9,10 @@ function DeleteButton({ id, onDelete }) {
     </button>
   );
 }
+
+DeleteButton.propTypes = {
+  id: PropTypes.number.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
 
 export default DeleteButton;
