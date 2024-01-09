@@ -3,16 +3,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
-function ContactItemImage({ ImageUrl }) {
+function ContactItemImage({ imageUrl }) {
   return (
     <div className="contact-item__image">
-      <img src={ImageUrl} alt="contact avatar" />
+      <img src={imageUrl} alt="contact avatar" />
     </div>
   );
 }
 
 ContactItemImage.propTypes = {
-  ImageUrl: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
 };
 
 export default ContactItemImage;

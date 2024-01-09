@@ -6,10 +6,10 @@ import ContactItemImage from "./ContactItemImage";
 import DeleteButton from "./DeleteButton";
 
 // eslint-disable-next-line react/prop-types
-function ContactItem({ ImageUrl, name, tag, id, onDelete }) {
+function ContactItem({ imageUrl, name, tag, id, onDelete }) {
   return (
     <div className="contact-item">
-      <ContactItemImage ImageUrl={ImageUrl} />
+      <ContactItemImage imageUrl={imageUrl} />
       <ContactItemBody name={name} tag={tag} />
       <DeleteButton id={id} onDelete={onDelete} />
     </div>
@@ -17,7 +17,7 @@ function ContactItem({ ImageUrl, name, tag, id, onDelete }) {
 }
 
 ContactItem.propTypes = {
-  ImageUrl: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
